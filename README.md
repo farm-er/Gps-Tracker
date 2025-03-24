@@ -5,7 +5,7 @@
 ## Introduction
 
 - This project aims to centralize drivers monitoring for businesses like ( delivery, transportation ... etc), by providing an intuitive dashboard 
-for admins and managers that shows real-time data about their drivers, mainly their locations speed and tracks and history.
+for admins and managers that shows real-time data about their drivers. mainly their locations, speed and tracks and history.
 - This will work by tracking the drivers' positions using a small mobile app that sends locations to the server then it gets displayed in the dashboard.
 
 ## Features
@@ -24,4 +24,4 @@ for admins and managers that shows real-time data about their drivers, mainly th
 
 ## More
 
-- This project is subject to enhancements in the future depending on the needs.
+- This project's features are subject to changes in the future depending on the needs.
