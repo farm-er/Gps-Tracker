@@ -1,4 +1,5 @@
 # Gps-Tracker
+<<<<<<< HEAD
 
 
 
@@ -27,3 +28,6 @@ for admins and managers that shows real-time data about their drivers, mainly th
 ## More
 
 - This project is subject to enhancements in the future depending on the needs.
+=======
+ayaa
+>>>>>>> 7addd8a435c8c06aca4fe03ccf691f9e90d8bab7
