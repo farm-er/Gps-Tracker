@@ -15,6 +15,8 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Location of media storage based on the project's root directory
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -37,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'authentication_service'
 ]
 
 MIDDLEWARE = [
@@ -73,10 +76,26 @@ WSGI_APPLICATION = 'giso.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "giso",
+        "USER": "giso",
+        "PASSWORD": "giso",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
+        'CONN_MAX_AGE': 0,
+        'CONN_HEALTH_CHECKS': True,
+        "OPTIONS": {
+            "pool": True,
+            "client_encoding": 'UTF8',
+            # "default_transaction_isolation": 'read committed',
+            # "USE_TZ": False,
+        },
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
 }
 
 

@@ -5,3 +5,18 @@ source venv/bin/activate
 pip install django
 django-admin startproject giso .
 pip freeze > requirements.txt
+python3 manage.py runserver
+
+
+python3 manage.py makemigrations
+
+python3 manage.py migrate
+
+
+docker run --name postgres -e POSTGRES_USER=giso -e POSTGRES_PASSWORD=giso -e POSTGRES_DB=giso -p 5432:5432 -d postgres
+
+docker exec -it e1eed7ae89e0 psql -U giso
+
+
+giso=# \dt
+  to list all databases in postgres

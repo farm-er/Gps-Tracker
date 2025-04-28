@@ -1,0 +1,54 @@
+
+## POSTGRES CONFIGURATION
+
+# connection pool to true to use connection pool with the db
+"pool": True,
+
+
+# max age to None to have persistent connection for the db
+'CONN_MAX_AGE': None,
+
+
+# this makes sure it health checks the connection to the db which ensures not failing the request  
+'CONN_HEALTH_CHECKS': True,
+
+
+# use the global TIME_ZONE config
+"USE_TZ": False,
+
+
+# by providing these values django won't set them for every connection 
+"client_encoding": 'UTF8',
+"default_transaction_isolation": 'read committed',
+
+
+
+## MODELS
+
+
+# ImageField gives django control over images uploads
+# with null=True which enables true as a value for the field
+# and Blank true which allows empty form input
+
+
+# from django.utils.translation import gettext_lazy as _
+# with:  first_name = models.CharField(_("first name"), max_length=50)
+# enables support for translation to support multiple languages in the future
+
+
+# Added this with the user of AbstractUser as super class to remove username and make the email primary field for auth
+# username = None
+# USERNAME_FIELD = 'email'
+# REQUIRED_FIELDS = []
+
+
+# Adding Meta class to your model helps in a lot of things:
+# unique_together = ('first_name', 'last_name')
+# verbose_name = _("user")
+# verbose_name_plural = _("users")
+
+
+
+
+# added ready() function in apps.py to mark that the app is ready
+
